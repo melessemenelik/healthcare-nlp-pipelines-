@@ -1,4 +1,9 @@
 # 🏥 Healthcare NLP Pipelines
+![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=white)
+![HuggingFace](https://img.shields.io/badge/HuggingFace-yellow?logo=huggingface&logoColor=black)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
+![License: MIT](https://img.shields.io/badge/License-MIT-green)
 
 This repository demonstrates transformer-based NLP models applied to healthcare records. It includes preprocessing scripts, embeddings, and retrieval workflows using PyTorch, Hugging Face, LangChain, and FAISS/Pinecone.
 
@@ -40,8 +45,4 @@ curl -X POST "http://127.0.0.1:8000/query" \
 ## 🌟 Example Use Case
 - **Input:** "Patient diagnosed with diabetes, prescribed metformin"
 - **Output:** Retrieved relevant medical context + generated summary
-![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=white)
-![HuggingFace](https://img.shields.io/badge/HuggingFace-yellow?logo=huggingface&logoColor=black)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
-![License: MIT](https://img.shields.io/badge/License-MIT-green)
+
