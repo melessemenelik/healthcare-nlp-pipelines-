@@ -1,0 +1,6 @@
+torch==2.2.0
+transformers==4.39.0
+langchain==0.1.0
+faiss-cpu==1.7.4
+fastapi==0.110.0
+uvicorn==0.29.0
