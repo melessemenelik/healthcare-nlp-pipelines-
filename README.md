@@ -24,3 +24,16 @@ This repository demonstrates transformer-based NLP models applied to healthcare 
 ---
 
 ## 📂 Repository Structure
+---
+
+## ⚡ Quickstart
+
+Clone the repo and install dependencies:
+```bash
+git clone https://github.com/melessemenelik/healthcare-nlp-pipelines.git
+cd healthcare-nlp-pipelines
+pip install -r requirements.txt
+uvicorn src.api:app --reload
+curl -X POST "http://127.0.0.1:8000/query" \
+     -H "Content-Type: application/json" \
+     -d '{"text":"Patient diagnosed with diabetes"}'
