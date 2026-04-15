@@ -69,6 +69,59 @@ curl -X POST "http://127.0.0.1:8000/query" \
 - **Input:** "Patient diagnosed with diabetes, prescribed metformin"
 - **Output:** Retrieved relevant medical context + generated summary
 
+## 🏗️ Architecture Diagram
+
+This project demonstrates end‑to‑end Healthcare NLP pipelines:
+
+                 ┌───────────────────────────────┐
+                 │        Data Sources           │
+                 │  (Healthcare Records, EHRs)   │
+                 └───────────────┬───────────────┘
+                                 │
+                                 ▼
+                 ┌───────────────────────────────┐
+                 │       Preprocessing Layer     │
+                 │  Cleaning, Normalization      │
+                 │  Tokenization (LangChain)     │
+                 └───────────────┬───────────────┘
+                                 │
+                                 ▼
+                 ┌───────────────────────────────┐
+                 │   Transformer Models (NLP)    │
+                 │  BERT / ClinicalBERT / BioBERT│
+                 └───────────────┬───────────────┘
+                                 │
+                                 ▼
+                 ┌───────────────────────────────┐
+                 │ Embeddings & Vector Storage   │
+                 │ HuggingFace + FAISS/Pinecone  │
+                 └───────────────┬───────────────┘
+                                 │
+                                 ▼
+                 ┌───────────────────────────────┐
+                 │ Retrieval-Augmented Generation │
+                 │ Contextual Query + Summarizer │
+                 └───────────────┬───────────────┘
+                                 │
+                                 ▼
+                 ┌───────────────────────────────┐
+                 │   FastAPI Service Layer       │
+                 │ REST Endpoints for Deployment │
+                 └───────────────┬───────────────┘
+                                 │
+                                 ▼
+                 ┌───────────────────────────────┐
+                 │   Cloud Deployment (Optional) │
+                 │ Docker + AWS SageMaker        │
+                 └───────────────────────────────┘
+
+Both local and cloud setups handle:
+- **[Preprocessing](ca://s?q=Explain_preprocessing_in_healthcare_NLP)** of structured & semi‑structured records  
+- **[Embedding generation](ca://s?q=Explain_embedding_generation_in_NLP)** for vector search  
+- **[Retrieval pipelines](ca://s?q=Explain_RAG_in_healthcare_NLP)** for contextual answers  
+- **[Deployment](ca://s?q=Explain_FastAPI_deployment_for_NLP_models)** via FastAPI/Docker/SageMaker
+
+
 ## 🔄 NLP Pipeline Workflow  
 
 ```mermaid
