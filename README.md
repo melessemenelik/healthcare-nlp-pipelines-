@@ -80,4 +80,10 @@ flowchart LR
     E --> F[Retrieval-Augmented Generation (RAG)]
     F --> G[FastAPI Endpoint]
 
+## 🔮 Future Work
+- Expand support for additional healthcare NLP models (BioBERT, MedGPT)
+- Integrate more vector DBs (Weaviate, Milvus)
+- Add monitoring dashboards for pipeline performance
+- Build CI/CD workflows for automated deployment
+
 
