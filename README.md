@@ -5,6 +5,17 @@
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green)
 
+## 📑 Table of Contents
+- [Description](#-description)
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Repository Structure](#-repository-structure)
+- [Quickstart](#-quickstart)
+- [Example Use Case](#-example-use-case)
+- [Workflow Diagram](#-workflow-diagram)
+- [Future Work](#-future-work)
+
+
 This repository demonstrates transformer-based NLP models applied to healthcare records. It includes preprocessing scripts, embeddings, and retrieval workflows using PyTorch, Hugging Face, LangChain, and FAISS/Pinecone.
 
 ---
@@ -29,7 +40,19 @@ This repository demonstrates transformer-based NLP models applied to healthcare 
 ---
 
 ## 📂 Repository Structure
----
+healthcare-nlp-pipelines/
+├── src/                  # Source code for API & pipelines
+│   ├── preprocessing.py  # Data cleaning & normalization
+│   ├── embeddings.py     # Embedding generation
+│   ├── retrieval.py      # FAISS/Pinecone vector search
+│   ├── api.py            # FastAPI endpoints
+│   └── utils.py          # Helper functions
+├── notebooks/            # Demo notebooks for experiments
+├── requirements.txt      # Python dependencies
+├── README.md             # Project documentation
+├── LICENSE               # MIT License
+└── .gitignore            # Ignore build and environment files
+
 
 ## ⚡ Quickstart
 
@@ -45,4 +68,16 @@ curl -X POST "http://127.0.0.1:8000/query" \
 ## 🌟 Example Use Case
 - **Input:** "Patient diagnosed with diabetes, prescribed metformin"
 - **Output:** Retrieved relevant medical context + generated summary
+
+## 🔄 NLP Pipeline Workflow  
+
+```mermaid
+flowchart LR
+    A[Healthcare Records] --> B[Preprocessing]
+    B --> C[Transformer Models (BERT/ClinicalBERT)]
+    C --> D[Embeddings (HuggingFace + LangChain)]
+    D --> E[Vector DB (FAISS/Pinecone)]
+    E --> F[Retrieval-Augmented Generation (RAG)]
+    F --> G[FastAPI Endpoint]
+
 
