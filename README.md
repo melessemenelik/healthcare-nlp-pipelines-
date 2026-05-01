@@ -39,20 +39,6 @@ This repository demonstrates transformer-based NLP models applied to healthcare 
 
 ---
 
-## 📂 Repository Structure
-healthcare-nlp-pipelines/
-├── src/                  # Source code for API & pipelines
-│   ├── preprocessing.py  # Data cleaning & normalization
-│   ├── embeddings.py     # Embedding generation
-│   ├── retrieval.py      # FAISS/Pinecone vector search
-│   ├── api.py            # FastAPI endpoints
-│   └── utils.py          # Helper functions
-├── notebooks/            # Demo notebooks for experiments
-├── requirements.txt      # Python dependencies
-├── README.md             # Project documentation
-├── LICENSE               # MIT License
-└── .gitignore            # Ignore build and environment files
-
 
 ## ⚡ Quickstart
 
@@ -68,6 +54,21 @@ curl -X POST "http://127.0.0.1:8000/query" \
 ## 🌟 Example Use Case
 - **Input:** "Patient diagnosed with diabetes, prescribed metformin"
 - **Output:** Retrieved relevant medical context + generated summary
+
+
+## 📂 Repository Structure
+healthcare-nlp-pipelines/
+├── src/                  # Source code for API & pipelines
+│   ├── preprocessing.py  # Data cleaning & normalization
+│   ├── embeddings.py     # Embedding generation
+│   ├── retrieval.py      # FAISS/Pinecone vector search
+│   ├── api.py            # FastAPI endpoints
+│   └── utils.py          # Helper functions
+├── notebooks/            # Demo notebooks for experiments
+├── requirements.txt      # Python dependencies
+├── README.md             # Project documentation
+├── LICENSE               # MIT License
+└── .gitignore            # Ignore build and environment files
 
 ## 🏗️ Architecture Diagram
 
