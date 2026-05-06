@@ -121,7 +121,7 @@ Both local and cloud setups handle:
 - **[Embedding generation](ca://s?q=Explain_embedding_generation_in_NLP)** for vector search  
 - **[Retrieval pipelines](ca://s?q=Explain_RAG_in_healthcare_NLP)** for contextual answers  
 - **[Deployment](ca://s?q=Explain_FastAPI_deployment_for_NLP_models)** via FastAPI/Docker/SageMaker
-```
+
 
 ## 🔄 NLP Pipeline Workflow  
 
