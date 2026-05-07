@@ -133,11 +133,12 @@ Both local and cloud setups handle:
 ```mermaid
 flowchart LR
     A[Healthcare Records / EHRs] --> B[Preprocessing Layer]
-    B --> C[Transformer Models (BERT / ClinicalBERT / BioBERT)]
-    C --> D[Embeddings Generation (HuggingFace + LangChain)]
-    D --> E[Vector DB Storage (FAISS / Pinecone)]
-    E --> F[Retrieval-Augmented Generation (RAG)]
+    B --> C["Transformer Models: BERT, ClinicalBERT, BioBERT"]
+    C --> D["Embeddings Generation: HuggingFace + LangChain"]
+    D --> E["Vector DB Storage: FAISS / Pinecone"]
+    E --> F["Retrieval-Augmented Generation (RAG)"]
     F --> G[FastAPI Service Layer]
-    G --> H[Cloud Deployment (Docker + AWS SageMaker)]
+    G --> H["Cloud Deployment: Docker + AWS SageMaker"]
+
 
 
