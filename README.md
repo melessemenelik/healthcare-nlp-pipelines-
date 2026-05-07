@@ -122,6 +122,12 @@ Both local and cloud setups handle:
 - **[Retrieval pipelines](ca://s?q=Explain_RAG_in_healthcare_NLP)** for contextual answers  
 - **[Deployment](ca://s?q=Explain_FastAPI_deployment_for_NLP_models)** via FastAPI/Docker/SageMaker
 
+## 🔮 Future Work
+- Expand support for additional healthcare NLP models (BioBERT, MedGPT)
+- Integrate more vector DBs (Weaviate, Milvus)
+- Add monitoring dashboards for pipeline performance
+- Build CI/CD workflows for automated deployment
+```
 
 ## 🔄 NLP Pipeline Workflow  
 
@@ -133,11 +139,4 @@ flowchart LR
     D --> E[Vector DB (FAISS/Pinecone)]
     E --> F[Retrieval-Augmented Generation (RAG)]
     F --> G[FastAPI Endpoint]
-
-## 🔮 Future Work
-- Expand support for additional healthcare NLP models (BioBERT, MedGPT)
-- Integrate more vector DBs (Weaviate, Milvus)
-- Add monitoring dashboards for pipeline performance
-- Build CI/CD workflows for automated deployment
-
 
