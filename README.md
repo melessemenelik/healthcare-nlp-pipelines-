@@ -132,10 +132,12 @@ Both local and cloud setups handle:
 ## 🔄 NLP Pipeline Workflow  
 ```mermaid
 flowchart LR
-    A[Healthcare Records] --> B[Preprocessing]
-    B --> C[Transformer Models (BERT/ClinicalBERT)]
-    C --> D[Embeddings (HuggingFace + LangChain)]
-    D --> E[Vector DB (FAISS/Pinecone)]
+    A[Healthcare Records / EHRs] --> B[Preprocessing Layer]
+    B --> C[Transformer Models (BERT / ClinicalBERT / BioBERT)]
+    C --> D[Embeddings Generation (HuggingFace + LangChain)]
+    D --> E[Vector DB Storage (FAISS / Pinecone)]
     E --> F[Retrieval-Augmented Generation (RAG)]
-    F --> G[FastAPI Endpoint]
+    F --> G[FastAPI Service Layer]
+    G --> H[Cloud Deployment (Docker + AWS SageMaker)]
+
 
