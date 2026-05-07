@@ -130,7 +130,6 @@ Both local and cloud setups handle:
 ```
 
 ## 🔄 NLP Pipeline Workflow  
-
 ```mermaid
 flowchart LR
     A[Healthcare Records] --> B[Preprocessing]
